@@ -38,5 +38,16 @@
     "dns1.int.yt",
     "dns2.int.yt"
     ]
+  },
+  {
+    "subdomain": "rn",
+    "owner": "YouRooni",
+    "ns": [
+      "ns1.he.net",
+      "ns2.he.net",
+      "ns3.he.net",
+      "ns4.he.net",
+      "ns5.he.net"
+    ]
   }
 ]
