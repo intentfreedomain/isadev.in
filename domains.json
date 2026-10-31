@@ -49,5 +49,13 @@
       "ns4.he.net",
       "ns5.he.net"
     ]
+  },
+  {
+    "subdomain": "kvn",
+    "owner": "nikazz",
+    "ns": [
+      "ada.ns.cloudflare.com",
+    "bob.ns.cloudflare.com"
+    ]
   }
 ]
