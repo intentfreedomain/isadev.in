@@ -49,5 +49,15 @@
       "ns4.he.net",
       "ns5.he.net"
     ]
+  },
+  {
+  "subdomain": "antidote",
+  "owner": "AntiDoteMA",
+  "ns": [
+    "freedns1.registrar-servers.com",
+    "freedns2.registrar-servers.com",
+    "freedns3.registrar-servers.com",
+    "freedns4.registrar-servers.com"
+    ]
   }
 ]
