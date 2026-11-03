@@ -59,5 +59,13 @@
     "freedns3.registrar-servers.com",
     "freedns4.registrar-servers.com"
     ]
-  }
+  },
+  {
+    "subdomain": "sprk",
+    "owner": "BestSpark687090",
+    "ns": [
+      "vps.bestspark.org",
+      "vps.bestspark.qzz.io"
+    ]
+  },
 ]
