@@ -3,8 +3,7 @@ name: Deploy Domain
 on:
   push:
     branches: [main]
-    paths:
-      - "domains.json"
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -14,8 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 10
 
       - uses: actions/setup-python@v5
         with:
