@@ -77,10 +77,8 @@
     "subdomain": "kartik",
     "owner": "Kartikmhatre",
     "ns": [
-      "dns1.int.yt",
-      "dns2.int.yt",
-      "dns3.int.yt",
-      "dns4.int.yt"
+      "ns1.cloudflare.com",
+      "ns2.cloudflare.com"
     ]
   }
 ]
