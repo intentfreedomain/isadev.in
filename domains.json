@@ -1,10 +1,10 @@
 [
   {
-    "subdomain": "example",
-    "owner": "yourgithubusername",
+    "subdomain": "yuna",
+    "owner": "lim-yuna",
     "ns": [
-      "ns1.yourdomain.com",
-      "ns2.yourdomain.com"
+    "ns1.infinityfree.com",
+    "ns2.infinityfree.com"
     ]
   },
   {
