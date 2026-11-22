@@ -1,0 +1,45 @@
+name: Deploy DNS
+
+on:
+  pull_request_target:
+    branches: [main]
+    paths:
+      - "domains.json"
+    types: [closed]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    if: (github.event_name == 'pull_request_target' && github.event.pull_request.merged == true) || github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      - name: Check secret is available
+        run: |
+          if [ -z "$INTDNS_API_KEY" ]; then
+            echo "ERROR: INTDNS_API_KEY secret is not set or not accessible"
+            exit 1
+          else
+            echo "OK: secret is set (length=${#INTDNS_API_KEY})"
+          fi
+        env:
+          INTDNS_API_KEY: ${{ secrets.INTDNS_API_KEY }}
+
+      - name: Register NS records
+        env:
+          INTDNS_API_KEY: ${{ secrets.INTDNS_API_KEY }}
+        run: python scripts/deploy_domain.py
