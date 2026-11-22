@@ -1,6 +1,11 @@
 name: Deploy Domain
 
 on:
+  pull_request_target:
+    branches: [main]
+    paths:
+      - "domains.json"
+    types: [closed]
   push:
     branches: [main]
   workflow_dispatch:
@@ -10,9 +15,12 @@ permissions:
 
 jobs:
   deploy:
+    if: (github.event_name == 'pull_request_target' && github.event.pull_request.merged == true) || github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-python@v5
         with:
