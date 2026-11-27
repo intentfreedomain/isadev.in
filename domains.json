@@ -93,5 +93,13 @@
       "dns3.int.yt",
       "dns4.it.yt",
     ]
+  },
+  {
+    "subdomain": "saksham",
+    "owner": "sakshamwadhankar",
+    "ns": [
+      "ns1.desec.io",
+      "ns2.desec.org"
+    ]
   }
 ]
